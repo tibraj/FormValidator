@@ -21,11 +21,19 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+
+
+function checkRequired(inputArray) {
+    inputArray.forEach(function(input) {
+        if(input.value.trim() === '') {
+            showError(input, `${getFieldName(input)} is requried`)
+        } else {
+            showSuccess(input);
+        };
+    });
+}
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    if(username.value === '') {
-        showError(username, 'Username is required');
-    } else {
-        showSuccess(username);
-    }
+    checkRequired([username, email, password, confirmPassword]);
 })
