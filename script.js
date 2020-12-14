@@ -21,7 +21,9 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
 
 function checkRequired(inputArray) {
     inputArray.forEach(function(input) {
