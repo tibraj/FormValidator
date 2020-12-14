@@ -34,3 +34,9 @@ h2 {
     padding-bottom: 20px;
     position: relative;
 }
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
