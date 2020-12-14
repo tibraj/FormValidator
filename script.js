@@ -11,6 +11,11 @@ function showError(input, message) {
     small.innerText = message;
 }
 
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if(username.value === '') {
